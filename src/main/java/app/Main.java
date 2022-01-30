@@ -49,4 +49,15 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
     }
+
+    public static void showHelpPane(Stage stage) throws IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(Constants.HELP_PANE_PATH));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Помощь");
+        stage.setScene(scene);
+        stage.show();
+    }
 }

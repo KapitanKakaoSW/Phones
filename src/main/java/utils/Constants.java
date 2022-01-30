@@ -13,4 +13,5 @@ public class Constants {
     public final static String APP_MENU_PATH = "/fxml/AppMenu.fxml";
     public final static String ADD_PANE_PATH = "/fxml/AddPane.fxml";
     public final static String UPDATE_PANE_PATH = "/fxml/UpdatePane.fxml";
+    public final static String HELP_PANE_PATH = "/fxml/HelpPane.fxml";
 }

@@ -51,7 +51,8 @@
               <FontIcon iconLiteral="bi-search" iconSize="16" />
           </graphic>
       </Button>
-      <Button fx:id="helpButton" layoutX="484.0" layoutY="52.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="91.0" text="Помощь">
+      <Button fx:id="helpButton" layoutX="484.0" layoutY="52.0" mnemonicParsing="false"
+              onAction="#helpButtonClick" prefHeight="29.0" prefWidth="91.0" text="Помощь">
          <graphic>
             <FontIcon iconLiteral="bi-question-square" iconSize="16" selectionEnd="1" textAlignment="RIGHT" />
          </graphic>

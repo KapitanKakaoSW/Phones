@@ -12,6 +12,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import utils.Constants;
 
+import java.io.IOException;
+
 
 public class AppMenuController {
 
@@ -119,6 +121,11 @@ public class AppMenuController {
         entries.addAll(DBHandler.readSelectiveData(searchTextField.getText()));
 
         tableView.setItems(entries);
+    }
+
+    public void helpButtonClick() throws IOException {
+        Stage stage = new Stage();
+        Main.showHelpPane(stage);
     }
 
     public void cancelButtonClick() {
