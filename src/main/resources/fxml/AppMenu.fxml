@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<Pane fx:id="menuPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxcontrollers.AppMenuController">
+   <children>
+      <TableView fx:id="tableView" layoutX="28.0" layoutY="107.0" prefHeight="486.0" prefWidth="337.0">
+         <columns>
+            <TableColumn fx:id="idsColumn" prefWidth="36.0" text="id" />
+            <TableColumn fx:id="namesColumn" prefWidth="170.0" text="Имя" />
+            <TableColumn fx:id="numbersColumn" prefWidth="130.0" text="Номер" />
+         </columns>
+      </TableView>
+      <Button fx:id="add" layoutX="393.0" layoutY="107.0" mnemonicParsing="false" onAction="#addClick"
+              prefHeight="61.0" prefWidth="164.0" text="Добавить" textFill="#00940a">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="update" layoutX="393.0" layoutY="190.0" mnemonicParsing="false" onAction="#updateClick"
+              prefHeight="61.0" prefWidth="164.0" text="Обновить" textFill="#009487">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="delete" layoutX="392.0" layoutY="272.0" mnemonicParsing="false" onAction="#deleteClick"
+              prefHeight="61.0" prefWidth="164.0" text="Удалить" textFill="#a10404">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorLabel" layoutX="406.0" layoutY="357.0" prefHeight="79.0" prefWidth="164.0" textAlignment="CENTER" textFill="#d70000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <MenuBar layoutY="1.0" prefHeight="15.0" prefWidth="600.0" />
+      <TextField fx:id="searchTextField" layoutX="28.0" layoutY="53.0" prefHeight="28.0" prefWidth="338.0" promptText="Введите имя контакта..." />
+      <Button fx:id="searchButton" layoutX="394.0" layoutY="53.0" mnemonicParsing="false" onAction="#searchData" prefHeight="29.0" prefWidth="33.0">
+          <graphic>
+              <FontIcon iconLiteral="bi-search" iconSize="16" />
+          </graphic>
+      </Button>
+      <Button fx:id="helpButton" layoutX="484.0" layoutY="52.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="91.0" text="Помощь">
+         <graphic>
+            <FontIcon iconLiteral="bi-question-square" iconSize="16" selectionEnd="1" textAlignment="RIGHT" />
+         </graphic>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="437.0" layoutY="53.0" mnemonicParsing="false" onAction="#cancelButtonClick" prefHeight="29.0" prefWidth="33.0">
+         <graphic>
+            <FontIcon iconLiteral="bi-x" iconSize="16" />
+         </graphic>
+      </Button>
+   </children>
+</Pane>
