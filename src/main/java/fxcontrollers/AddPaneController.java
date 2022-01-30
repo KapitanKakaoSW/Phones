@@ -1,6 +1,5 @@
 package fxcontrollers;
 
-import database.DBHandler;
 import database.entities.Contact;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import models.AddDataModel;
 import utils.SceneRefresher;
 
 public class AddPaneController {
@@ -40,7 +40,7 @@ public class AddPaneController {
 
     public void submitAddClick() {
         contact = new Contact(nameField.getText(), countryChoiceBox.getValue() + numberField.getText());
-        DBHandler.addData(contact);
+        AddDataModel.addData(contact);
 
         stage = (Stage) submitButton.getScene().getWindow();
         stage.close();

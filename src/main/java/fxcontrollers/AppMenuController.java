@@ -1,7 +1,6 @@
 package fxcontrollers;
 
 import app.Main;
-import database.DBHandler;
 import database.entities.Contact;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,6 +9,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import models.DeleteDataModel;
+import models.ReadDataModel;
 import utils.Constants;
 
 import java.io.IOException;
@@ -59,7 +60,7 @@ public class AppMenuController {
 
         ObservableList<Contact> entries = FXCollections.observableArrayList();
 
-        entries.addAll(DBHandler.readData());
+        entries.addAll(ReadDataModel.readData());
 
         idsColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         namesColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -106,7 +107,7 @@ public class AppMenuController {
         } else {
             errorLabel.setText("");
             Contact contact = new Contact(itemId);
-            DBHandler.deleteData(contact);
+            DeleteDataModel.deleteData(contact);
             itemId = 0;
             initialize();
         }
@@ -118,7 +119,7 @@ public class AppMenuController {
 
         ObservableList<Contact> entries = FXCollections.observableArrayList();
 
-        entries.addAll(DBHandler.readSelectiveData(searchTextField.getText()));
+        entries.addAll(ReadDataModel.readData(searchTextField.getText()));
 
         tableView.setItems(entries);
     }

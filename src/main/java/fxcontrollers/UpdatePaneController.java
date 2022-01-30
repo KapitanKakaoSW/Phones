@@ -1,6 +1,5 @@
 package fxcontrollers;
 
-import database.DBHandler;
 import database.entities.Contact;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,6 +8,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import models.UpdateDataModel;
 import utils.SceneRefresher;
 
 import static fxcontrollers.AppMenuController.itemId;
@@ -48,7 +48,7 @@ public class UpdatePaneController {
 
         Contact contact = new Contact(itemId, nameField.getText(),
                 countryChoiceBox.getValue() + numberField.getText());
-        DBHandler.updateData(contact);
+        UpdateDataModel.updateData(contact);
 
         stage = (Stage) nameField.getScene().getWindow();
         stage.close();
