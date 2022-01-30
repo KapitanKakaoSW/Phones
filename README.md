@@ -9,3 +9,5 @@ Run -> Edit configuration -> Modify options -> Add VM options
 
 Пример:
 --module-path "C:\JavaFX\javafx-sdk-17.0.1\lib" --add-modules javafx.controls,javafx.fxml
+
+Полная рабочая версия проекта в master ветке
