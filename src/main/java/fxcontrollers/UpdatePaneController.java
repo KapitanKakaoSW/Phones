@@ -20,12 +20,6 @@ public class UpdatePaneController {
     Stage stage;
 
     @FXML
-    Label oldNameLabel;
-
-    @FXML
-    Label oldPhoneLabel;
-
-    @FXML
     TextField nameField;
 
     @FXML
@@ -36,8 +30,8 @@ public class UpdatePaneController {
 
     public void initialize() {
 
-        oldNameLabel.setText(itemName);
-        oldPhoneLabel.setText(itemPhone);
+        nameField.setText(itemName);
+        numberField.setText(itemPhone);
 
         ObservableList<String> code = FXCollections.observableArrayList( "+380", "+48", "+7", "");
         countryChoiceBox.setItems(code);
